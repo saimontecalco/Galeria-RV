@@ -1,3 +1,4 @@
+class_name Player
 extends RigidBody3D
 var speed = 0.1
 @onready var spring_arm_3d: SpringArm3D = $SpringArm3D

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bws1ilmjm2xy8"]
+[gd_scene load_steps=6 format=3 uid="uid://bws1ilmjm2xy8"]
 
 [ext_resource type="PackedScene" uid="uid://reyj4r5cf53b" path="res://Scene/rigid_body_3d.tscn" id="1_f6udf"]
+[ext_resource type="PackedScene" uid="uid://dqr5pkrnjatxd" path="res://Scene/coin_colletion.tscn" id="2_sblpm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rlixt"]
 sky_top_color = Color(0.71044886, 0.10608543, 0.7258046, 1)
@@ -48,3 +49,6 @@ size = Vector3(1.0447998, 1, 1)
 
 [node name="RigidBody3D" parent="." instance=ExtResource("1_f6udf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CoinColletion" parent="." instance=ExtResource("2_sblpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52650404, 1.4531794)
