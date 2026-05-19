@@ -17,6 +17,7 @@ func _ready() -> void:
 	spring_arm_3d.top_level = true
 	spring_arm_3d.spring_length=5.0
 	spring_arm_3d.rotation_degrees.x=-20.0
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

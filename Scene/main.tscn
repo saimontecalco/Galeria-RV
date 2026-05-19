@@ -26,29 +26,43 @@ transform = Transform3D(1, 0, 0, 0, 0.879549, 0.47580835, 0, -0.47580835, 0.8795
 shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(5.0474057, 0, 0, 0, 0.123513095, 0, 0, 0, 5.7823544, 0, -0.16481805, 0)
+transform = Transform3D(12.036802, 0, 0, 0, 0.123513095, 0, 0, 0, 14.710606, 0.7831119, -0.16481805, 0)
 use_collision = true
+size = Vector3(1.3103027, 1, 1)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(5.0474057, 0, 0, 0, 0.34588152, 0, 0, 0, 0.43756905, 0, -0.014269948, 2.6556957)
+transform = Transform3D(14.929763, 0, 0, 0, 0.34588152, 0, 0, 0, 0.43756905, 0.86104, -0.014270425, 7.1286163)
 use_collision = true
+size = Vector3(1.053, 4, 1)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(5.0474057, 0, 0, 0, 0.34588152, 0, 0, 0, 0.43756905, 0, -0.014269948, -2.6875718)
+transform = Transform3D(14.929763, 0, 0, 0, 0.34588152, 0, 0, 0, 0.43756905, 0.86104, -0.014270425, -6.9306383)
 use_collision = true
+size = Vector3(1.053, 4, 1)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
-transform = Transform3D(-2.3785458e-07, 0, 0.43756902, 0, 0.34588155, 0, -5.4414783, 0, -1.912675e-08, -2.2992058, -0.014269948, -0.016718566)
+transform = Transform3D(-6.0080885e-07, 0, 0.43756908, 0, 0.34588155, 0, -13.744903, 0, -1.9126752e-08, -6.8724003, -0.014269948, -0.016718566)
 use_collision = true
-size = Vector3(1.0447998, 1, 1)
+size = Vector3(1.045, 4, 1)
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="."]
-transform = Transform3D(-2.3785458e-07, 0, 0.43756902, 0, 0.34588155, 0, -5.4414783, 0, -1.912675e-08, 2.3007607, -0.014269948, -0.016718566)
+transform = Transform3D(-6.0080885e-07, 0, 0.43756908, 0, 0.34588155, 0, -13.744903, 0, -1.9126752e-08, 8.472332, -0.014269948, -0.016718566)
 use_collision = true
-size = Vector3(1.0447998, 1, 1)
+size = Vector3(1.045, 4, 1)
 
 [node name="RigidBody3D" parent="." instance=ExtResource("1_f6udf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="CoinColletion" parent="." instance=ExtResource("2_sblpm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52650404, 1.4531794)
+[node name="Node" type="Node" parent="."]
+
+[node name="CoinColletion" parent="Node" instance=ExtResource("2_sblpm")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.52650404, 1.4531794)
+
+[node name="CoinColletion2" parent="Node" instance=ExtResource("2_sblpm")]
+transform = Transform3D(-2.1855692e-08, 0, 0.49999997, 0, 0.5, 0, -0.49999997, 0, -2.1855692e-08, 5.003274, 0.52650404, 1.4531794)
+
+[node name="CoinColletion3" parent="Node" instance=ExtResource("2_sblpm")]
+transform = Transform3D(-2.1855692e-08, 0, 0.49999997, 0, 0.5, 0, -0.49999997, 0, -2.1855692e-08, 5.003274, 0.52650404, -3.1801643)
+
+[node name="CoinColletion4" parent="Node" instance=ExtResource("2_sblpm")]
+transform = Transform3D(-2.1855692e-08, 0, 0.49999997, 0, 0.5, 0, -0.49999997, 0, -2.1855692e-08, -2.4574718, 0.52650404, -3.1801643)

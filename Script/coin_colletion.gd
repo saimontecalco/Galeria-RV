@@ -2,6 +2,8 @@ extends Area3D
 
 @export var speed := 0.01
 
+signal coinColleted
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -20,3 +22,5 @@ func _on_body_entered(body: Node3D) -> void:
 		print("Colision por clase")
 
 	print("Colision player")
+	emit_signal("coinColleted")
+	queue_free()
