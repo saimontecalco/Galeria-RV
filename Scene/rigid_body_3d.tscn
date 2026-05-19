@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://reyj4r5cf53b"]
+[gd_scene load_steps=4 format=3 uid="uid://reyj4r5cf53b"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_qi8ds"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_0iixc"]
 radius = 0.2989379
+
+[sub_resource type="BoxMesh" id="BoxMesh_qi8ds"]
 
 [node name="RigidBody3D" type="RigidBody3D"]
 
@@ -14,4 +16,11 @@ mesh = SubResource("SphereMesh_qi8ds")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_0iixc")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.17614104, 0, 0, 0, 0.096136354, 0, 0, 0, 0.1414463, 0, 0.31639028, 0)
+mesh = SubResource("BoxMesh_qi8ds")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.94817954, 0.31773496, 0, -0.31773496, 0.94817954, 0, 0.7520369, 1.3321077)
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
