@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://reyj4r5cf53b"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_qi8ds"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0iixc"]
+radius = 0.2989379
+
+[node name="RigidBody3D" type="RigidBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5792442, 0, 0, 0, 0.6040493, 0, 0, 0, 0.60459256, 0, 0, 0)
+mesh = SubResource("SphereMesh_qi8ds")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_0iixc")
+
+[node name="Camera3D" type="Camera3D" parent="."]

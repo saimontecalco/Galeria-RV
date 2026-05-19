@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://bws1ilmjm2xy8"]
+
+[ext_resource type="PackedScene" uid="uid://reyj4r5cf53b" path="res://Scene/rigid_body_3d.tscn" id="1_f6udf"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rlixt"]
+sky_top_color = Color(0.71044886, 0.10608543, 0.7258046, 1)
+sky_horizon_color = Color(0.8798818, 0.513816, 0.7463594, 1)
+ground_bottom_color = Color(0.054050885, 0.19897786, 0.20585847, 1)
+
+[sub_resource type="Sky" id="Sky_f6udf"]
+sky_material = SubResource("ProceduralSkyMaterial_rlixt")
+
+[sub_resource type="Environment" id="Environment_sblpm"]
+background_mode = 2
+sky = SubResource("Sky_f6udf")
+ambient_light_color = Color(0.6344776, 0.2483452, 1.92523e-07, 1)
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sblpm")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.879549, 0.47580835, 0, -0.47580835, 0.879549, 0, 4.9236217, 4.684095)
+shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(5.0474057, 0, 0, 0, 0.123513095, 0, 0, 0, 5.7823544, 0, -0.16481805, 0)
+use_collision = true
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(5.0474057, 0, 0, 0, 0.34588152, 0, 0, 0, 0.43756905, 0, -0.014269948, 2.6556957)
+use_collision = true
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(5.0474057, 0, 0, 0, 0.34588152, 0, 0, 0, 0.43756905, 0, -0.014269948, -2.6875718)
+use_collision = true
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(-2.3785458e-07, 0, 0.43756902, 0, 0.34588155, 0, -5.4414783, 0, -1.912675e-08, -2.2992058, -0.014269948, -0.016718566)
+use_collision = true
+size = Vector3(1.0447998, 1, 1)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(-2.3785458e-07, 0, 0.43756902, 0, 0.34588155, 0, -5.4414783, 0, -1.912675e-08, 2.3007607, -0.014269948, -0.016718566)
+use_collision = true
+size = Vector3(1.0447998, 1, 1)
+
+[node name="RigidBody3D" parent="." instance=ExtResource("1_f6udf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
