@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://reyj4r5cf53b"]
+[gd_scene load_steps=6 format=3 uid="uid://reyj4r5cf53b"]
 
 [ext_resource type="Script" uid="uid://pew40xyrklmt" path="res://Script/rigid_body_3d.gd" id="1_0iixc"]
+[ext_resource type="PackedScene" uid="uid://deqrmdvrcygfu" path="res://Scene/hug.tscn" id="2_6fyea"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_qi8ds"]
 
@@ -29,3 +30,5 @@ mesh = SubResource("BoxMesh_qi8ds")
 transform = Transform3D(1, 0, 0, 0, 0.94817954, 0.31773496, 0, -0.31773496, 0.94817954, 0, 0.7520369, 1.3321077)
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+
+[node name="HUG" parent="SpringArm3D" instance=ExtResource("2_6fyea")]

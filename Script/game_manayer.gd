@@ -1,7 +1,7 @@
 extends Node
 @onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
-
+var points :=0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var coins = get_tree().get_nodes_in_group("Colletion")
@@ -14,3 +14,9 @@ func _on_coinColleted():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func addPoint():
+	points+=1
+
+func getPoints():
+	return points

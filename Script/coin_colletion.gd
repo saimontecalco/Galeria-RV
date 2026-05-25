@@ -23,4 +23,6 @@ func _on_body_entered(body: Node3D) -> void:
 
 	print("Colision player")
 	emit_signal("coinColleted")
+	GameManayer.addPoint()
+	print(GameManayer.getPoints)
 	queue_free()
